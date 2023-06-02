@@ -1,0 +1,13 @@
+phpunit.xml
+package-lock.json
+composer.lock
+artisan
+.env
+.editorconfig
+.env.example
+vendor
+tests
+node_modules
+public/dist
+public/plugins
+public/storage
