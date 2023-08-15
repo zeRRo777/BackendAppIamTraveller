@@ -45,6 +45,9 @@
                     <div class="col-2 mb-3">
                         <a href="{{route('admin.cities.create')}}" class="btn btn-block btn-primary">Добавить</a>
                     </div>
+                    <div class="col-2 mb-3">
+                        <a href="{{route('admin.cities.statistic')}}" class="btn btn-block btn-primary">Посмотреть статистику</a>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-12">

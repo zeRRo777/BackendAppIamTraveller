@@ -58,6 +58,13 @@
                             Достопримечательности
                         </a>
                     </div>
+                    <div class="col-4 mb-3">
+                        <a href="{{route('admin.cities.city_statistic', $city->id)}}"
+                           class="btn btn-block btn-primary d-flex align-items-center justify-content-center"
+                        >
+                            Посмотреть статистику города {{$city->name}}
+                        </a>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-6">

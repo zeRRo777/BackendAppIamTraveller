@@ -3,8 +3,10 @@
 
 use App\Http\Controllers\Admin\Attraction\AddImageStoreController;
 use App\Http\Controllers\Admin\Attraction\DestroyImageController;
+use App\Http\Controllers\Admin\Attraction\StatisticController;
 use App\Http\Controllers\Admin\City\CreateCityAttractionController;
 use App\Http\Controllers\Admin\City\ShowCityAttractionsController;
+use App\Http\Controllers\Admin\City\StatisticCityController;
 use App\Http\Controllers\Admin\City\StoreCityAttractionController;
 use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\User\CreateController;
@@ -51,6 +53,8 @@ Route::middleware('auth:admin')->group(function () {
     Route::prefix('cities')->group(function (){
         Route::get('/', \App\Http\Controllers\Admin\City\IndexController::class)
             ->name('admin.cities.index');
+        Route::get('/statistic', \App\Http\Controllers\Admin\City\StatisticController::class)
+            ->name('admin.cities.statistic');
         Route::delete('/{city}', \App\Http\Controllers\Admin\City\DestroyController::class)
             ->name('admin.cities.destroy');
         Route::get('/create', \App\Http\Controllers\Admin\City\CreateController::class)
@@ -59,6 +63,8 @@ Route::middleware('auth:admin')->group(function () {
             ->name('admin.cities.store');
         Route::get('/{city}', \App\Http\Controllers\Admin\City\ShowController::class)
             ->name('admin.cities.show');
+        Route::get('/{city}/statistic', StatisticCityController::class)
+            ->name('admin.cities.city_statistic');
         Route::get('/{city}/edit', \App\Http\Controllers\Admin\City\EditController::class)
             ->name('admin.cities.edit');
         Route::patch('/{city}', \App\Http\Controllers\Admin\City\UpdateController::class)
@@ -74,6 +80,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::prefix('attractions')->group(function(){
         Route::get('/', \App\Http\Controllers\Admin\Attraction\IndexController::class)
             ->name('admin.attractions.index');
+        Route::get('/statistic', StatisticController::class)->name('admin.attractions.statistic');
         Route::get('/create', \App\Http\Controllers\Admin\Attraction\CreateController::class)
             ->name('admin.attractions.create');
         Route::post('/', \App\Http\Controllers\Admin\Attraction\StoreController::class)

@@ -29,7 +29,6 @@ class StoreRequest extends FormRequest
             'name' => ['required', 'string', 'max:100'],
             'main_image' => ['required', 'file'],
             'city_id' => ['required', 'integer', 'exists:cities,id'],
-            'description' => ['required', 'string', 'max:1000', 'min:20'],
             'content' => ['required', 'string', 'max:3000', 'min:150'],
             'lat' => ['required', 'numeric', 'max:90', 'min:-90'],
             'long' => ['required', 'numeric', 'max:180', 'min:0'],

@@ -103,14 +103,6 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <div class="row">
-                    <div class="col-2">
-                        <h4>Описание</h4>
-                    </div>
-                    <div class="col-12 text-justify">
-                        <p>{!! $attraction->description !!}</p>
-                    </div>
-                </div>
 
                 <div class="row">
                     <div class="col-4">

@@ -125,16 +125,6 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group w-50 @error('description') border border-danger @enderror">
-                                <label for="summernote_description">Описание</label>
-                                <textarea id="summernote_description"  name="description">
-                                    {{$attraction->description}}
-                                </textarea>
-                            </div>
-                            @error('description')
-                            <p class="text-danger">{{$message}}</p>
-                            @enderror
-
                             <div class="form-group @error('content') border border-danger @enderror">
                                 <label for="summernote_content">Основной контент</label>
                                 <textarea id="summernote_content" name="content">

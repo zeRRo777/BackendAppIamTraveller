@@ -49,6 +49,13 @@
                             Добавить
                         </a>
                     </div>
+                    <div class="col-2 mb-3">
+                        <a href="{{route('admin.attractions.statistic')}}"
+                           class="btn btn-block btn-primary"
+                        >
+                            Посмотреть статистику
+                        </a>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-12">

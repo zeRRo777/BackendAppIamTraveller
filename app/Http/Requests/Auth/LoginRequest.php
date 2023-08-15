@@ -2,12 +2,14 @@
 
 namespace App\Http\Requests\Auth;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use JetBrains\PhpStorm\ArrayShape;
 
 class LoginRequest extends FormRequest
 {
+
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -29,4 +31,5 @@ class LoginRequest extends FormRequest
             'email' => ['required', 'email','exists:admins,email', 'max:50'],
         ];
     }
+
 }

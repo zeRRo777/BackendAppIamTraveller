@@ -15,11 +15,6 @@ class Attraction extends Model
 
     protected $guarded=[];
 
-    public function usersLike(): BelongsToMany
-    {
-        return $this->belongsToMany(User::class,'user_attraction_likes',  'attraction_id', 'user_id');
-    }
-
     public function city(): BelongsTo
     {
         return $this->belongsTo(City::class, 'city_id', 'id', );
@@ -28,5 +23,10 @@ class Attraction extends Model
     public function images(): HasMany
     {
         return $this->hasMany(Attraction_image::class, 'attraction_id', 'id');
+    }
+
+    public function histories(): HasMany
+    {
+        return $this->hasMany(User_attraction_history::class, 'attraction_id', 'id');
     }
 }
